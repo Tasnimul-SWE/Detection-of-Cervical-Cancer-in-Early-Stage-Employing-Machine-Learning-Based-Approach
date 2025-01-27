@@ -1,1 +1,48 @@
-When compared to other gynecological cancers, cervical cancer (CC) is considered to be a lethal and second primary reason for women fatality in third-world countries. If diagnosed in its initial phases, it is treatable. In that regard, the preliminary goal of this project is to establish an acceptable classifier and computer models for identifying CC. A CC dataset is composed of four class features, such as biopsy, cytology, hinselmann, and schiller, and it has been splitted into four groups based on desired features. The dataset was generated during the data preparation step for improved analytical results in subsequent analyses. Then, using a statistical and EDA technique, we discovered hidden insights in the dataset. To create a machine learning model, many supervised machine learning techniques are trained to the dataset in order to determine the most effective predictor. The efficacy of all classification techniques is then compared using accuracy, precision, recall, sensitivity, f-measure, AUROC, and kappa statistics. It has been identified that RF gained the best performance on behalf of biopsy with 94.57% accuracy. Besides, XGB gained the highest performance regarding cytology, hinselmann, and schiller with 98.06%, 96.51%, and 94.57% accuracy respectively. Then, we found the feature importance score by the best performing classifier to rank and show the feature importance for the target feature. Overall, the findings of the study specifies that the proposed model is highly potential to detect CC in early stage.
+
+# Cervical Cancer Risk Factors Analysis
+
+## Overview
+This repository provides a comprehensive analysis of cervical cancer risk factors using a variety of machine learning techniques. The project leverages clinical and demographic data to assess the correlation and importance of various features in predicting biopsy results and other diagnostic outcomes.
+
+---
+
+## Features
+- **Exploratory Data Analysis (EDA)**:
+  - Feature correlation and significance testing.
+  - Box plots for demographic and clinical features.
+- **Machine Learning Models**:
+  - Logistic Regression
+  - Random Forest Classifier
+  - Decision Tree Classifier
+  - Support Vector Classifier (SVC)
+  - XGBoost Classifier
+  - Multi-Layer Perceptron (MLP) Classifier
+- **Performance Metrics**:
+  - Accuracy, F1-score, Precision, Recall, Matthews Correlation Coefficient (MCC), Cohen's Kappa, Log Loss.
+- **Feature Importance Visualization**:
+  - Bar plots of feature importance scores for selected models.
+
+---
+
+## File Structure
+- `cervical_cancer.py`: Main Python script containing data preprocessing, visualization, and machine learning pipelines.
+- `data/`: Placeholder directory for input datasets (e.g., `Processed_risk_factors_cervical_cancer.csv`).
+- `results/`: Contains generated plots, feature importance graphs, and model outputs.
+
+---
+
+## Requirements
+The project uses the following Python packages:
+
+| Package            | Version      |
+|--------------------|--------------|
+| `numpy`            | `1.21.6`     |
+| `pandas`           | `1.3.5`      |
+| `seaborn`          | `0.11.2`     |
+| `matplotlib`       | `3.5.1`      |
+| `scikit-learn`     | `1.0.2`      |
+| `xgboost`          | `1.6.1`      |
+
+You can install these dependencies via:
+```bash
+pip install -r requirements.txt
